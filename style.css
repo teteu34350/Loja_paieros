@@ -1,0 +1,89 @@
+/* Resetando margens e preenchimento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffc9f9;
+}
+
+/* CSS DO CARD */
+.card {
+    margin-top: 50px;
+}
+
+/* ORGANIZANDO OS CARDS */
+#elementos {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Alterado para 1fr em telas menores */
+    gap: 20px; /* Adicionado espaço entre os cards */
+    text-align: center;
+}
+
+#elementos .card {
+    padding: 20px;
+    margin: auto;
+    margin-top: 50px;
+    /* Adicionando largura máxima para os cards */
+    max-width: 100%;
+}
+
+/* CABEÇALHO */
+#cabecalho {
+    background-color: violet;
+    width: 100%;
+    height: auto; /* Alterado para ajustar a altura conforme a imagem */
+    padding: 20px; /* Adicionado preenchimento */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#IMG-LOGO {
+    width: auto; /* Ajustado para a largura da imagem se ajustar ao seu container */
+    height: 135px;
+    max-width: 100%;
+}
+
+/* RODAPÉ */
+#rodape {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Adicionado espaço entre os ícones sociais */
+    padding: 10px;
+    background-color: #eee; /* Adicionado uma cor de fundo para o rodapé */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    /* Layout para telas de até 768px (tablets e celulares em orientação paisagem) */
+    #elementos {
+        grid-template-columns: 1fr; /* Coluna única para telas menores */
+    }
+
+    #cabecalho {
+        height: auto; /* Ajusta a altura do cabeçalho */
+    }
+
+    #IMG-LOGO {
+        height: 100px; /* Ajusta a altura do logo */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Layout para telas de até 480px (celulares em orientação retrato) */
+    #cabecalho {
+        padding: 10px; /* Ajusta o preenchimento do cabeçalho */
+    }
+
+    #IMG-LOGO {
+        height: 80px; /* Ajusta a altura do logo */
+    }
+
+    #rodape {
+        flex-direction: column; /* Alinha os ícones sociais em coluna */
+        gap: 10px; /* Reduz o espaço entre os ícones sociais */
+    }
+}

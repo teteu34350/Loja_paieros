@@ -1,0 +1,44 @@
+/* Rodapé */
+#rodape {
+    background-color: violet;
+    width: 100%;
+    padding: 20px; /* Adiciona um espaçamento interno ao rodapé */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Adiciona espaço entre os ícones sociais */
+    flex-wrap: wrap; /* Permite que os ícones quebrem linha se necessário */
+}
+
+#rodape img {
+    width: 60px; /* Largura padrão dos ícones sociais */
+    height: 60px; /* Altura padrão dos ícones sociais */
+    border-radius: 50%; /* Torna os ícones circulares */
+}
+
+/* Media Queries para Responsividade do Rodapé */
+@media (max-width: 768px) {
+    #rodape {
+        padding: 15px; /* Ajusta o espaçamento interno do rodapé */
+        gap: 10px; /* Reduz o espaço entre os ícones sociais */
+    }
+
+    #rodape img {
+        width: 50px; /* Ajusta a largura dos ícones sociais para telas menores */
+        height: 50px; /* Ajusta a altura dos ícones sociais para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    #rodape {
+        flex-direction: column; /* Alinha os ícones em coluna para telas menores */
+        align-items: center; /* Centraliza os ícones */
+        padding: 10px; /* Ajusta o espaçamento interno do rodapé */
+        gap: 10px; /* Reduz o espaço entre os ícones sociais */
+    }
+
+    #rodape img {
+        width: 40px; /* Ajusta a largura dos ícones sociais para telas muito pequenas */
+        height: 40px; /* Ajusta a altura dos ícones sociais para telas muito pequenas */
+    }
+}
